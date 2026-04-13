@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyApp - Login</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 500px; margin: 60px auto; padding: 20px; }
+    input { display: block; width: 100%; padding: 8px; margin: 8px 0; box-sizing: border-box; }
+    button { padding: 10px 20px; background: #0066cc; color: white; border: none; cursor: pointer; }
+    .search-section { margin-top: 40px; border-top: 1px solid #ccc; padding-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Login</h1>
+  <form action="/login" method="POST">
+    <label>Username</label>
+    <input type="text" name="username" placeholder="Enter username" />
+    <label>Password</label>
+    <input type="password" name="password" placeholder="Enter password" />
+    <button type="submit">Login</button>
+  </form>
+
+  <div class="search-section">
+    <h2>Search</h2>
+    <form action="/search" method="GET">
+      <input type="text" name="q" placeholder="Search products..." />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="search-section">
+    <h2>Profile</h2>
+    <form action="/profile" method="GET">
+      <input type="text" name="id" placeholder="User ID (e.g. 1)" />
+      <button type="submit">View Profile</button>
+    </form>
+  </div>
+</body>
+</html>
