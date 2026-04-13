@@ -230,7 +230,7 @@ def main():
 
     # Salvare predictii 
     df.to_csv("predictions.csv", index=False)
-    print("\n[+] Predictii salvate → predictions.csv")
+    print("\n[+] Predictii salvate => predictions.csv")
 
     # Grafice 
     print("[+] Generare grafice ...")
@@ -312,7 +312,7 @@ def _plot_results(df, yb_true, iso_pred, iso_score,
 
     plt.tight_layout()
     plt.savefig("test_results.png", dpi=150, bbox_inches="tight")
-    print("[+] Graf salvat → test_results.png")
+    print("[+] Graf salvat => test_results.png")
     plt.show()
 
 
