@@ -356,7 +356,7 @@ def _plot(df, yb_true, iso_pred, iso_score, ym_true, rf_pred, le,
 def main():
     parser = argparse.ArgumentParser(
         description="Anomaly detector flexibil — train/test pe CSV sau LOG",
-        formatter_class=argparse.RawTextHelpFormatter,
+        formatter_class=argparse.RawTextHelpFormatter
         
     )
     parser.add_argument("--train-csv", help="Antreneaza pe CSV (http_params.csv)")
