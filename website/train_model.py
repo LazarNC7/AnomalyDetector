@@ -191,7 +191,7 @@ def _plot_training(X_test, yb_test, ym_test, iso, iso_pred, rf, rf_pred, le):
 
     plt.tight_layout()
     plt.savefig("training_results.png", dpi=150, bbox_inches="tight")
-    print("[+] Graf salvat → training_results.png")
+    print("[+] Graf salvat => training_results.png")
     plt.show()
 
 
