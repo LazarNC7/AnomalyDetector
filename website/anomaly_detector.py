@@ -131,7 +131,7 @@ def extract_features(payloads, lengths):
 
 
 def load_csv(path):
-    """Incarca http_params.csv → DataFrame cu coloanele: payload, length, attack_type, label"""
+    """Incarca http_params.csv => DataFrame cu coloanele: payload, length, attack_type, label"""
     df = pd.read_csv(path)
     df.columns = [c.strip().strip('"') for c in df.columns]
     df["payload"]     = df["payload"].astype(str).str.strip('"')
@@ -153,7 +153,7 @@ def _ground_truth_from_log(ip, path, query, ua):
 
 
 def load_log(path):
-    """Incarca dataset_raw.log → DataFrame cu coloanele: payload, length, attack_type, label"""
+    """Incarca dataset_raw.log => DataFrame cu coloanele: payload, length, attack_type, label"""
     rows = []
     with open(path, "r", encoding="utf-8", errors="replace") as f:
         for line in f:
@@ -266,7 +266,7 @@ def evaluate(iso, rf, le, df_test, output_prefix, no_plots=False):
     # Save CSV
     out_csv = f"{output_prefix}_predictions.csv"
     df_test.to_csv(out_csv, index=False)
-    print(f"\n[+] Predictii salvate → {out_csv}")
+    print(f"\n[+] Predictii salvate => {out_csv}")
 
     # Plots
     _plot(df_test, y_binary, iso_pred, iso_score,
@@ -346,7 +346,7 @@ def _plot(df, yb_true, iso_pred, iso_score, ym_true, rf_pred, le,
     plt.tight_layout()
     out_png = f"{prefix}_results.png"
     plt.savefig(out_png, dpi=150, bbox_inches="tight")
-    print(f"[+] Graf salvat → {out_png}")
+    print(f"[+] Graf salvat => {out_png}")
     if not no_plots:
         plt.show()
     plt.close()
@@ -386,7 +386,7 @@ def main():
     print(f"\n{'='*55}")
     print(f"  Mod: train={train_src.upper()} | test={test_src.upper()}")
     if same_source:
-        print(f"  (Acelasi fisier → split 80/20 automat)")
+        print(f"  (Acelasi fisier => split 80/20 automat)")
     print(f"{'='*55}\n")
 
     # Incarcare date
