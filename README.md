@@ -1,4 +1,4 @@
-#  Web Attack Detection cu Inteligență Artificială
+
 
 Sistem de detecție a atacurilor web în timp real, bazat pe analiza logurilor de server cu algoritmi de Machine Learning.
 
