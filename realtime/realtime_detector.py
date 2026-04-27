@@ -16,7 +16,6 @@ Optiuni:
     --window    SECUNDE   dimensiunea ferestrei sliding window per IP (default: 60)
     --threshold FLOAT     threshold manual pentru ISO (default: din model)
     --output    FILE      salveaza alertele intr-un fisier JSON
-    --no-color            dezactiveaza culorile ANSI
     --simulate            ruleaza pe fisier existent cu delay simulat
 """
 
@@ -413,7 +412,7 @@ def simulate_file(path: str, delay: float = 0.01):
 #  Main 
 
 def main():
-    global USE_COLOR
+
 
     parser = argparse.ArgumentParser(
         description="Real-time HTTP Log Anomaly Detector",
@@ -435,8 +434,6 @@ Exemple:
     parser.add_argument("--delay",     type=float, default=0.005, help="Delay intre linii in modul simulate (default: 0.005s)")
     args = parser.parse_args()
 
-    if args.no_color:
-        USE_COLOR = False
 
     if not args.log and not args.docker:
         parser.error("Trebuie specificat --log sau --docker")
